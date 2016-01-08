@@ -1,2 +1,0 @@
-# wequick.github.io
-Wequick
