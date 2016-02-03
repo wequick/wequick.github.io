@@ -1,3 +1,16 @@
 name: Wequick
 description: 天下武功，唯快不破
+baseurl: ""
+
+gems: [jekyll-paginate, jekyll-gist]
 paginate: 10
+
+# Github markdown style
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "fenced_code_blocks", "with_toc_data"]
+
+# Locale
+locale: en
+exclude: ["zh-CN"]

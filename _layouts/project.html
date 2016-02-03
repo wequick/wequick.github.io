@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Wequick - {{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{page.description}}">
+    <link href="/assets/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/app-theme.css" rel="stylesheet">
+    <link href="/assets/css/roboto.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="/assets/js/html5shiv.js"></script><![endif]-->
+</head>
+<body class="project">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="span5">
+            <h1>{{page.title}}</h1>
+          </div>
+          <div class="span7">
+            <menu>
+              <ul>
+                <li><a href="{{page.github}}" data-title="View GitHub Project" class="menu github"><img src="/assets/images/icon-github.png" alt="GitHub"/></a></li>
+                <li><a href="http://code.wequick.net" data-title="Wequick Open Source Portal" class="menu square"><img src="/assets/images/icon-wequick.png" alt="Wequick"/></a></li>
+              </ul>
+            </menu>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="subtitle">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h2>{{page.subtitle}}</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="body">
+      <div class="container">
+        <div class="row">
+          <div id="article" class="span9">
+
+            <script src="/assets/js/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="/assets/js/jquery.smooth-scroll.min.js"></script>
+            <script src="/assets/js/jquery-maven-artifact.min.js"></script>
+            <script src="/assets/js/prettify.js"></script>
+
+            {{ content }}
+
+            <h3 id="contributing">Contributing</h3>
+            <p>If you would like to contribute code you can do so through GitHub by forking the repository and sending a pull request.</p>
+            <p>When submitting code, please make every effort to follow existing conventions and style in order to keep the code as readable as possible. </p>
+            <p>Before your code can be accepted into the project you must also sign the <a href="/CLA">Individual Contributor License Agreement (CLA)</a>.</p>
+
+            <h3 id="license">License</h3>
+            <pre>Copyright 2015-present wequick.net
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+          </div>
+          <div class="span3">
+            <div class="content-nav" data-spy="affix" data-offset-top="80">
+              <ul id="sidenav" class="nav nav-tabs nav-stacked primary">
+                
+              </ul>
+              <ul class="nav nav-pills nav-stacked secondary">
+                <li><a href="{{page.github}}/wiki">Wiki</a></li>
+                {% if page.javadoc %}
+                <li><a href="{{page.javadoc}}">Javadoc</a></li>
+                {% endif %}
+                {% if page.groovydoc %}
+                <li><a href="{{page.groovydoc}}">Groovydoc</a></li>
+                {% endif %}
+                {% if page.appledoc %}
+                <li><a href="{{page.appledoc}}">Appledoc</a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12 logo">
+            <a href="https://squareup.com"><img src="static/logo-square.png" alt="Square, Inc."/></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      $(function() {
+        // Syntax highlight code blocks.
+        prettyPrint();
+
+        // Add sidebar navigation.
+        var nav = $('#sidenav');
+        $('#article').children('h3').each(function(i, e){
+          var li = '<li><a href="#' + e.id + '">' + e.innerText + '</a></li>';
+          nav.append(li);
+        });
+
+        // Spy on scroll position for real-time updating of current section.
+        $('body').scrollspy();
+
+        // Use smooth-scroll for internal links.
+        $('a').smoothScroll();
+
+        // Enable tooltips on the header nav image items.
+        $('.menu').tooltip({
+          placement: 'bottom',
+          trigger: 'hover',
+          container: 'body',
+          delay: {
+            show: 500,
+            hide: 0
+          }
+        });
+      });
+    </script>
+</body>
+</html>

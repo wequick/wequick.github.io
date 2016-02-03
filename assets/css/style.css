@@ -19,6 +19,11 @@
 		background: #161616;
 	}
 
+	body.project
+	{
+		background: #F6F6F6;
+	}
+
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
