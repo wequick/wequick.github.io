@@ -5,7 +5,7 @@ title: Small
 subtitle: A <strong>small</strong> framework to split app into <strong>small</strong> parts
 github: https://github.com/wequick/small
 icon: /assets/images/small-icon-72.png
-javadoc: docs/javadoc/0.2.1/
+javadoc: docs/javadoc/0.3.0/
 ---
 
 ### Overview
@@ -46,7 +46,7 @@ buildscript {
 }
 apply plugin: 'net.wequick.small' // Small library to launch plug-ins
 small {
-    aarVersion = '0.2.1'
+    aarVersion = '0.3.0'
 }
 </pre>
 
