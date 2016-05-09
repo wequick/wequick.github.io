@@ -1,0 +1,48 @@
+{
+  "manifest": {
+    "version": "1.0.0",
+    "bundles": [
+      {
+        "uri": "lib.utils",
+        "pkg": "net.wequick.example.small.lib.utils"
+      },
+      {
+        "uri": "lib.style",
+        "pkg": "com.example.mysmall.lib.style"
+      },
+      {
+        "uri": "main",
+        "pkg": "net.wequick.example.small.app.main"
+      },
+      {
+        "uri": "home",
+        "pkg": "net.wequick.example.small.app.home"
+      },
+      {
+        "uri": "mine",
+        "pkg": "net.wequick.example.small.app.mine"
+      },
+      {
+        "uri": "detail",
+        "pkg": "net.wequick.example.small.app.detail",
+        "rules": {
+          "sub": "Sub"
+        }
+      },
+      {
+        "uri": "about",
+        "pkg": "net.wequick.example.small.app.about"
+      }
+    ]
+  },
+  "updates": [
+    {
+      "pkg": "net.wequick.example.small.app.about",
+      "url": "http://code.wequick.net/small/upgrade/libnet_wequick_example_small_app_about.so"
+    },
+    {
+      "pkg": "net.wequick.example.small.lib.utils",
+      "url": "http://code.wequick.net/small/upgrade/libnet_wequick_example_small_lib_utils.so"
+    }
+  ]
+}
