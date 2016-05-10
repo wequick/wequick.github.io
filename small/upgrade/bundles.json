@@ -38,11 +38,11 @@
   "updates": [
     {
       "pkg": "net.wequick.example.small.app.about",
-      "url": "http://code.wequick.net/small/upgrade/libnet_wequick_example_small_app_about.so"
+      "url": "http://wequick.github.io/small/upgrade/libnet_wequick_example_small_app_about.so"
     },
     {
       "pkg": "net.wequick.example.small.lib.utils",
-      "url": "http://code.wequick.net/small/upgrade/libnet_wequick_example_small_lib_utils.so"
+      "url": "http://wequick.github.io/small/upgrade/libnet_wequick_example_small_lib_utils.so"
     }
   ]
 }
