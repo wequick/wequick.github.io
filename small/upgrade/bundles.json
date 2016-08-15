@@ -49,7 +49,7 @@
       "url": "http://wequick.github.io/small/upgrade/libnet_wequick_example_small_lib_utils.so"
     },
     {
-      "pkg": "net.wequick.example.small.lib.style",
+      "pkg": "com.example.mysmall.lib.style",
       "url": "http://wequick.github.io/small/upgrade/libcom_example_mysmall_lib_style.so"
     },
     {
