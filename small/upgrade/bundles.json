@@ -47,6 +47,14 @@
     {
       "pkg": "net.wequick.example.small.lib.utils",
       "url": "http://wequick.github.io/small/upgrade/libnet_wequick_example_small_lib_utils.so"
+    },
+    {
+      "pkg": "net.wequick.example.small.lib.style",
+      "url": "http://wequick.github.io/small/upgrade/libcom_example_mysmall_lib_style.so"
+    },
+    {
+      "pkg": "net.wequick.example.small.app.home",
+      "url": "http://wequick.github.io/small/upgrade/libnet_wequick_example_small_app_home.so"
     }
   ]
 }
